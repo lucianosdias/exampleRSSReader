@@ -1,0 +1,12 @@
+<ion-view view-title="Baguete notícias">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="entry in entries" ng-click="browse(entry.link)" class="item-icon-right">
+                <h2 ng-bind="entry.title"></h2>
+                <!--<p>{{entry.pubDate | date: 'dd/MM/YYYY'}}</p>-->
+                <!--<span>{{entry.pubDate | amDateFormat:'DD/MM/YYYY hh:mm:ss'}}</span>-->
+                <span am-time-ago="entry.pubDate"></span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
